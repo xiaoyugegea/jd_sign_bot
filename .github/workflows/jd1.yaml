@@ -1,9 +1,9 @@
-name: Github JD-sign bot
+name: 京东账号1
 
 on:
     push:
     schedule:
-        - cron: '5 16 * * *'
+        - cron: '5 0,16 * * *'
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -17,7 +17,9 @@ jobs:
                 node-version: '12.x'
             - name: Run app
               run: npm install
-            - run: node app.js
+              
+            - name: 京东账号1
+              run: node app.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE1 }}
                 PUSH_KEY: ${{ secrets.PUSH_KEY }}
