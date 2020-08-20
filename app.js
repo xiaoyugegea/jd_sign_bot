@@ -57,6 +57,7 @@ async function start() {
     let content = "";
     if (fs.existsSync(path)) {
       content = fs.readFileSync(path, "utf8");
+      console.log(content)
     }
     await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
     console.log('发送结果完毕')
