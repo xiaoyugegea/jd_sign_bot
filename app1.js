@@ -59,7 +59,7 @@ async function start() {
       content = fs.readFileSync(path, "utf8");
       console.log(content)
     }
-    await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
+    await sendNotify("京东签到账号1-" + new Date().toLocaleDateString(), content);
     console.log('发送结果完毕')
   }
 }
