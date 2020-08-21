@@ -1,7 +1,7 @@
 name: 京东账号2
 
 on:
-    push:
+    #push:
     schedule:
         - cron: '2 0,16 * * *'
 jobs:
@@ -18,7 +18,7 @@ jobs:
             - name: Run app
               run: npm install
             - name: 京东账号2
-              run: node app.js
+              run: node app2.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE2 }}
                 PUSH_KEY: ${{ secrets.PUSH_KEY }}
