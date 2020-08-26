@@ -54,7 +54,7 @@ async function start() {
   await exec("node jd3.js >> result.txt");
   console.log('执行完毕')
 
-  if (serverJ) {
+  if (bark) {
     const path = "./result.txt";
     let content = "";
     if (fs.existsSync(path)) {
