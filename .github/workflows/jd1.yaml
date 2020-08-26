@@ -1,7 +1,7 @@
-name: 京东账号1
+name: 京东签到
 
 on:
-    #push:
+    push:
     schedule:
         - cron: '5 0,16 * * *'
 jobs:
@@ -18,8 +18,10 @@ jobs:
             - name: Run app
               run: npm install
               
-            - name: 京东账号1
-              run: node app1.js
+            - name: 京东签到
+              run: node app.js
               env:
-                JD_COOKIE: ${{ secrets.JD_COOKIE1 }}
+                JD_COOKIE1: ${{ secrets.JD_COOKIE1 }}
+                JD_COOKIE2: ${{ secrets.JD_COOKIE2 }}
+                JD_COOKIE3: ${{ secrets.JD_COOKIE3 }}
                 PUSH_KEY: ${{ secrets.PUSH_KEY }}
