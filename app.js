@@ -55,31 +55,31 @@ async function start() {
   console.log('执行完毕')
 
   if (bark) {
-    const path = "./result1.txt";
-    let content = "";
-    if (fs.existsSync(path)) {
-      content = fs.readFileSync(path, "utf8");
-      console.log(content)
+    const path1 = "./result1.txt";
+    let content1 = "";
+    if (fs.existsSync(path1)) {
+      content = fs.readFileSync(path1, "utf8");
+      console.log(content1)
     }
-    await sendNotify("京东签到1  " + new Date().toLocaleDateString(), content);
+    await sendNotify("京东签到1  " + new Date().toLocaleDateString(), content1);
     console.log('发送结果1完毕')
       
-    const path = "./result2.txt";
-    let content = "";
-    if (fs.existsSync(path)) {
-      content = fs.readFileSync(path, "utf8");
+    const path2 = "./result2.txt";
+    let content2 = "";
+    if (fs.existsSync(path2)) {
+      content = fs.readFileSync(path2, "utf8");
       console.log(content)
     }
-    await sendNotify("京东签到2  " + new Date().toLocaleDateString(), content);
+    await sendNotify("京东签到2  " + new Date().toLocaleDateString(), content2);
     console.log('发送结果2完毕')
       
-    const path = "./result3.txt";
-    let content = "";
-    if (fs.existsSync(path)) {
-      content = fs.readFileSync(path, "utf8");
-      console.log(content)
+    const path3 = "./result3.txt";
+    let content3 = "";
+    if (fs.existsSync(path3)) {
+      content = fs.readFileSync(path3, "utf8");
+      console.log(content3)
     }
-    await sendNotify("京东签到3  " + new Date().toLocaleDateString(), content);
+    await sendNotify("京东签到3  " + new Date().toLocaleDateString(), content3);
     console.log('发送结果3完毕')
   }
 }
