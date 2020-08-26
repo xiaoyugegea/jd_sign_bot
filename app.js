@@ -60,7 +60,7 @@ async function start() {
     const path1 = "./result1.txt";
     let content1 = "";
     if (fs.existsSync(path1)) {
-      content = fs.readFileSync(path1, "utf8");
+      content1 = fs.readFileSync(path1, "utf8");
       console.log(content1)
     }
     await sendNotify("京东签到1  " + new Date().toLocaleDateString(), content1);
@@ -69,8 +69,8 @@ async function start() {
     const path2 = "./result2.txt";
     let content2 = "";
     if (fs.existsSync(path2)) {
-      content = fs.readFileSync(path2, "utf8");
-      console.log(content)
+      content2 = fs.readFileSync(path2, "utf8");
+      console.log(content2)
     }
     await sendNotify("京东签到2  " + new Date().toLocaleDateString(), content2);
     console.log('发送结果2完毕')
@@ -78,7 +78,7 @@ async function start() {
     const path3 = "./result3.txt";
     let content3 = "";
     if (fs.existsSync(path3)) {
-      content = fs.readFileSync(path3, "utf8");
+      content3 = fs.readFileSync(path3, "utf8");
       console.log(content3)
     }
     await sendNotify("京东签到3  " + new Date().toLocaleDateString(), content3);
