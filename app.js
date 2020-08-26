@@ -11,7 +11,7 @@ const download = require('download')
 const cookies1 = process.env.JD_COOKIE1
 const cookies2 = process.env.JD_COOKIE2
 const cookies3 = process.env.JD_COOKIE3
-const serverJ = process.env.PUSH_KEY
+const bark = process.env.PUSH_KEY
 
 async function downFile () {
     const url = 'https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js'
@@ -30,10 +30,8 @@ async function changeFiele () {
 
 async function sendNotify (text,desp) {
   const options ={
-    uri:  `https://sc.ftqq.com/${serverJ}.send`,
-    form: { text, desp },
-    json: true,
-    method: 'POST'
+    uri:  `https://api.day.app/${bark}/${text}/${desp}`,
+    method: 'GET'
   }
   await rp.post(options).then(res=>{
     console.log(res)
