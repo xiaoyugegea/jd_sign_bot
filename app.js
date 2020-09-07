@@ -51,9 +51,12 @@ async function start() {
   await changeFiele();
   console.log('替换变量完毕')
   // 执行
-  await exec("node jd1.js >> result1.txt");
-  await exec("node jd2.js >> result2.txt");
-  await exec("node jd3.js >> result3.txt");
+  //await exec("node jd1.js >> result1.txt");
+  //await exec("node jd2.js >> result2.txt");
+  //await exec("node jd3.js >> result3.txt");
+  await exec("node jd1.js ");
+  await exec("node jd2.js ");
+  await exec("node jd3.js ");
   console.log('执行完毕')
 
   if (serverJ) {
